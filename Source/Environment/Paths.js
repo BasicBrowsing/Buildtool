@@ -35,8 +35,11 @@ export const bundle
     
 export const Bundle = {
     
+    manifest : join(bundle,'manifest.json') ,
+    
     locale : ( countryCode ) =>
         join(bundle,'_locale',countryCode,'messages.json')
+    
 }
     
 
@@ -50,4 +53,3 @@ export const translationData = ( language ) =>
 
 export const localeDescriptions 
     = join(translation,'Data','Descriptions.yml');
-
