@@ -10,7 +10,12 @@ const
     { stringify } = JSON ;
 
 
+const icon = 'Assets/Transparent.svg';
+
+
 let manifest = {
+    
+    version : '0.0.1' ,
     
     manifest_version : 3 ,
     
@@ -35,23 +40,23 @@ let manifest = {
         extension_pages : `script-src 'self'; img-src 'self'`
     },
     
-    host_permissions : [ 'all_urls' ] ,
+    host_permissions : [ '<all_urls>' ] ,
     
     incognito : 'spanning' ,
     
     action : {
         default_title : 'BasicBrowsing' ,
         browser_style : true ,
-        default_icon : 'Transparent.svg' ,
-        default_area : 'tabstrip'
+        default_area : 'tabstrip' ,
+        default_icon : icon
     },
     
     sidebar_action : {
         open_at_install : true ,
         browser_style : true ,
         default_title : 'BasicBrowsing' ,
-        default_panel : 'Sidebar.html' ,
-        default_icon : 'Transparent.svg'
+        default_panel : 'Pages/Sidebar.html' ,
+        default_icon : icon 
     },
     
     commands : {
@@ -93,7 +98,7 @@ let manifest = {
 export default async function generateManifest (){
     
     manifest = deepMerge(
-        useIcons('Transparent.svg') ,
+        useIcons(icon) ,
         manifest
     )
     

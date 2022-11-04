@@ -6,6 +6,8 @@
         "Events" : "https://deno.land/std@0.161.0/node/events.ts" ,
         "Colors" : "https://deno.land/std@0.161.0/fmt/colors.ts" ,
         "Path" : "https://deno.land/std@0.161.0/path/mod.ts" ,
-        "YAML" : "https://deno.land/std@0.161.0/encoding/yaml.ts"
+        "YAML" : "https://deno.land/std@0.161.0/encoding/yaml.ts",
+        
+        "Paths" : "./Source/Environment/Paths.js"
     }
 }

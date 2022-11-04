@@ -24,6 +24,9 @@ export const manifest
 export const assets
     = join(project,'Assets');
 
+export const addon
+    = join(project,'Addon');
+
 export const build
     = join(project,'Build');
     
@@ -35,10 +38,18 @@ export const bundle
     
 export const Bundle = {
     
+    standardLibrary : join(bundle,'STL') ,
+    
     manifest : join(bundle,'manifest.json') ,
     
+    assets : join(bundle,'Assets') ,
+    
+    style : join(bundle,'Style') ,
+
+    pages : join(bundle,'Pages') ,
+    
     locale : ( countryCode ) =>
-        join(bundle,'_locale',countryCode,'messages.json')
+        join(bundle,'_locales',countryCode,'messages.json')
     
 }
     
