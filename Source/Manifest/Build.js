@@ -48,16 +48,17 @@ let manifest = {
         default_title : 'BasicBrowsing' ,
         browser_style : true ,
         default_area : 'tabstrip' ,
+        default_popup : 'Pages/Popup.html' ,
         default_icon : icon
     },
     
-    sidebar_action : {
-        open_at_install : true ,
-        browser_style : true ,
-        default_title : 'BasicBrowsing' ,
-        default_panel : 'Pages/Sidebar.html' ,
-        default_icon : icon 
-    },
+    // sidebar_action : {
+    //     open_at_install : true ,
+    //     browser_style : true ,
+    //     default_title : 'BasicBrowsing' ,
+    //     default_panel : 'Pages/Sidebar.html' ,
+    //     default_icon : icon 
+    // },
     
     commands : {
         'open-settings' : {
@@ -85,11 +86,11 @@ let manifest = {
     }],
     
     permissions : [
-        'contextualIdentities' ,
+        // 'contextualIdentities' ,
         'webRequestBlocking' ,
         'webRequest' ,
-        'cookies' ,
-        'theme' ,
+        // 'cookies' ,
+        // 'theme' ,
         'tabs'
     ]
 }
